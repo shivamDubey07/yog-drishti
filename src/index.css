@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #FAF7F2;
+    color: #242926;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom utility classes for editorial luxury feel */
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-forest text-cream px-6 py-3.5 rounded-full font-medium text-sm tracking-wide transition-all duration-300 hover:bg-forest-light hover:shadow-luxury focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-transparent border border-forest text-forest px-6 py-3.5 rounded-full font-medium text-sm tracking-wide transition-all duration-300 hover:bg-forest hover:text-cream focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2;
+  }
+
+  .btn-gold {
+    @apply inline-flex items-center justify-center gap-2 bg-gold text-forest-dark px-6 py-3.5 rounded-full font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-gold-light hover:shadow-luxury;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-sage/40 bg-white px-4 py-3 text-sm text-charcoal placeholder:text-charcoal/40 focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/20 transition-all;
+  }
+}
